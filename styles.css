@@ -1,0 +1,264 @@
+/*css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* custom CSS */
+
+body {
+    background-color: #b8cfe9;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+nav {
+    background-color: #57778c;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 1em;
+    margin-top: 1em;
+    width: 75%;
+    background-color: #57778c;
+    display: inline-block;
+}
+h3 {
+    font-family: hwt-artz, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 4em;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: .5em;
+}
+h2 {
+    font-family: hwt-artz, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #57778c; 
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 2em;
+}
+h4 {
+    font-family: bree, sans-serif;
+    font-weight: 400;
+    font-style: bold;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+a {
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    font-family: bree, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#about {
+    width: 70%;
+    text-align: left;
+    margin:auto; 
+    padding-bottom: 2em;
+    display: flex;
+}
+img {
+    width: 30%;
+    height: auto;
+    padding: 1em;
+}
+#photos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+figure {
+    text-align: center;
+}
+figure img {
+    width: 70%;
+    padding-right: 4em;
+}
+figcaption {
+    font-family: 'Open Sans', sans-serif;
+    color: #57778c;
+}
+footer {
+    text-align: center;
+    background-color: #57778c;
+    color: white;
+    height: 2em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10%;
+    clear: both;
+}
+#indexfooter {
+    text-align: center;
+    background-color: #57778c;
+    color: white;
+    height: 2em;
+    position: relative;
+}
+
+/*Photo Carousel Plugin Code*/
+
+*{margin:0;padding:0;}
+a {color:inherit;text-decoration:none;}
+
+#wrap{
+  position:absolute;
+  left:0; top:25%;
+  width:150%;
+  height:80%;
+  display:flex;
+  align-items:stretch;
+  margin:0 40%;
+}
+.hb {
+  position:relative;
+  width:25%;
+  height: 60%;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  z-index:2;
+  transform:scale(.97);
+}
+.hb2 {
+    position:relative;
+    width:25%;
+    height: 70%;
+    z-index:3;
+    display:flex;
+    align-items:center;
+    z-index:2;
+    transform:scale(.97);
+  }
+.c{
+  position:relative;
+  display:block;
+  max-width:90%;
+}
+.c2{
+    position:relative;
+    display:block;
+    max-width:80%;
+  }
+.c img {
+  position:relative;
+  display:block;
+  width:100%;
+  height:auto;
+  z-index:2;
+}
+.c2 img {
+    position:relative;
+    display:block;
+    width:70%;
+    height:auto;
+    z-index:2;
+  }
+
+
+.txt {
+  position:absolute;
+  top:100%; left:10%;
+  width:80%;
+  opacity:0;
+  padding:1em 0 0 1em;
+  border-left:1px solid;
+  z-index:1;
+  transform:scaleY(1) translateY(-50px);
+  transition:transform .2s, opacity .5s;
+}
+h1 {
+  font-size:1.2em;
+  font-weight:700;
+  text-transform:uppercase;
+}
+.hb:hover .txt {
+  opacity:1;
+  transform:scaleY(1) translateY(0);
+}
+.hb2:hover .txt {
+    opacity:1;
+    transform:scaleY(1) translateY(0);
+  }
+.credits:hover {
+  text-decoration:underline;
+  opacity:1;
+}
+
+/*media queries */
+@media (max-width: 960px) {
+	img {
+	  width: 40%;
+      height: auto;
+      padding: .5em;
+	}
+    #photos {
+    margin-left: 11%;
+    }
+  }
+@media (max-width: 630px) {
+    h3 {
+     font-size: 2em;
+    }
+}
+@media (max-width: 765px) {
+    nav {
+      font-size: 1em;
+    }
+    a {
+      padding: .5em;
+    }
+}
+@media (max-width: 550px) {
+    nav a {
+        display: flex;
+        flex-direction: column;
+        padding: .25em;
+    }
+    nav {
+        width: 40%;
+    }
+}
+@media (max-width: 850px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+    }
+    article {
+        padding-top: 2em;
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oft6svb.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oft6svb.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Katie Lynn Swiatek</title>
+</head>
+<body>
+    <header>
+        <h3>Design by Katie Lynn Swiatek</h3>
+        <nav>
+            <ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="photography.html">Photography</a>
+            </ul>
+        </nav>
+    </header>
+    <div id="wrap">
+        <a href="#" class="hb2">
+          <div class="c2">
+            <img src="images/CSU.png" alt=""/>
+            <div class="txt">
+              <h1>Formed in Faith</h1>
+              <p>Banner design created for Florida State University's Catholic Student Union </p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="hb2">
+          <div class="c2">
+            <img src="images/lennon.png" alt=""/>
+            <div class="txt">
+              <h1>Imagine</h1>
+              <p>Digital Portrait of John Lennon created in Adobe Illustrator.</p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="hb2">
+          <div class="c2">
+            <img src="images/comicposter.jpg" alt=""/>
+            <div class="txt">
+              <h1>Women Through The Pages</h1>
+              <p>Promotional poster designer for a student created exhibition highlighting women throughout the history of comic books.</p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="hb2">
+          <div class="c2">
+            <img src="images/typofiles.png" alt=""/>
+            <div class="txt">
+              <h1>Typofiles</h1>
+              <p>A colaborative class project showcasing various elements of typographical design.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <footer> &copy Swiatek 2022 </footer>
+<!--Javascript-->
+<script>
+    $(document).ready(function(){
+  var docWidth = $('body').width(),
+      $wrap = $('#wrap'),
+      $images = $('#wrap .hb2'),
+      slidesWidth = $wrap.width();
+  
+  $(window).on('resize', function(){
+    docWidth = $('body').width();
+    slidesWidth = $wrap.width();
+  })
+  
+  $(document).mousemove(function(e) {
+    var mouseX = e.pageX,
+        offset = mouseX / docWidth * slidesWidth - mouseX / 2;
+    
+    $images.css({
+      '-webkit-transform': 'translate3d(' + -offset + 'px,0,0)',
+              'transform': 'translate3d(' + -offset + 'px,0,0)'
+    });
+  });
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oft6svb.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oft6svb.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Photography by Katie Lynn Swiatek</title>
+</head>
+<body>
+    <header>
+        <h3>Katie Lynn Swiatek</h3>
+        <nav>
+            <ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="design.html">Graphic Design Samples</a>
+            </ul>
+        </nav>
+    </header>
+    <div id="wrap">
+        <a href="#" class="hb">
+          <div class="c">
+            <img src="images/fountain.jpg" alt=""/>
+            <div class="txt">
+              <h1>Vires Artes Mores Fountain</h1>
+              <p>Florida State University graduate poses in front of a fountain representing FSU's mantra, meaning "Strength, Skill, and Character." </p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="hb">
+          <div class="c">
+            <img src="images/gradcap.jpg" alt=""/>
+            <div class="txt">
+              <h1>Grad Cap</h1>
+              <p>Close up of the details of a graducation cap.</p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="hb">
+          <div class="c">
+            <img src="images/maternity.jpeg" alt=""/>
+            <div class="txt">
+              <h1>Parenthood</h1>
+              <p>Parents await the arival of their child.</p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="hb">
+          <div class="c">
+            <img src="images/sunlight.jpeg" alt=""/>
+            <div class="txt">
+              <h1>Here Comes The Sun</h1>
+              <p>A glimmer of light captured in Tallahassee, FL.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <footer> &copy Swiatek 2022 </footer>
+<!--Javascript-->
+<script>
+    $(document).ready(function(){
+  var docWidth = $('body').width(),
+      $wrap = $('#wrap'),
+      $images = $('#wrap .hb'),
+      slidesWidth = $wrap.width();
+  
+  $(window).on('resize', function(){
+    docWidth = $('body').width();
+    slidesWidth = $wrap.width();
+  })
+  
+  $(document).mousemove(function(e) {
+    var mouseX = e.pageX,
+        offset = mouseX / docWidth * slidesWidth - mouseX / 2;
+    
+    $images.css({
+      '-webkit-transform': 'translate3d(' + -offset + 'px,0,0)',
+              'transform': 'translate3d(' + -offset + 'px,0,0)'
+    });
+  });
+})
+</script>
+</body>
+</html>
