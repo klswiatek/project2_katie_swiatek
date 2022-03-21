@@ -49,7 +49,7 @@ h3 {
     font-style: normal;
     font-size: 4em;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: #57778c; 
     padding-top: .5em;
 }
 h2 {
@@ -113,7 +113,7 @@ figcaption {
 }
 footer {
     text-align: center;
-    background-color: #57778c;
+    background-color: #4e5153;
     color: white;
     height: 2em;
     position: absolute;
@@ -217,6 +217,20 @@ h1 {
 .credits:hover {
   text-decoration:underline;
   opacity:1;
+}
+
+/*Darkmode CSS*/
+
+.darkmode--activated p, .darkmode--activated li {
+  color: rgb(0, 0, 0);
+}
+
+.button {
+  isolation:isolate;
+}
+
+.darkmode--activated .logo {
+  mix-blend-mode: difference;
 }
 
 /*media queries */
